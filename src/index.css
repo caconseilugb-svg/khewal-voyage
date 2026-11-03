@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-gris text-nuit antialiased; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-or focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-nuit text-white hover:bg-nuit-600; }
+  .btn-or { @apply btn bg-or text-nuit hover:bg-or-600; }
+  .btn-vert { @apply btn bg-vert text-white hover:bg-vert-600; }
+  .carte { @apply rounded-2xl bg-white p-6 shadow-carte; }
+  .champ { @apply w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm focus:border-or focus:outline-none focus:ring-2 focus:ring-or/40; }
+}
